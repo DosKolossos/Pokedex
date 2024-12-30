@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/Pokemon_Classic.ttf">
+    <title>PokéDex</title>
+    <base href="/pokedex/">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+
+    <script src="script.js"></script>
+    <script src="chart.js"></script>
+
+
+</head>
+
+<body onload="hideLoadMore(), loadAndShowContent()">
+    <div class="loadingscreen d-none" id="loadingScreen">
+        <div class="loading-wrapper">
+            <img class="loadingicon" src="img/pokeball.png">
+            Loading...
+        </div>
+    </div>
+    <div id="infoCard" class="d-none">
+    </div>
+    <header>
+        <h1>PokéDex</h1>
+        <span><input id="searchPokemon" type="text" min="3" onkeyup="searchPokemon()"
+                placeholder="Search Pokémon..."></span>
+    </header>
+
+    <div id="main"></div>
+
+    <div id="loadMore" class="load-more" onclick="increaseLimit()">Load more</div>
+
+</body>
+
+</html>
