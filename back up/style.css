@@ -448,13 +448,7 @@ span {
 }
 
 .escape-img:hover {
-    transition: 0.5s;
-    scale: 1.1;
-}
-
-.escape-img:not(:hover) {
-    transition: 0.5s;
-    scale: 1.0;
+    filter: brightness(5);
 }
 
 .info-gif {
